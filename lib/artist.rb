@@ -22,6 +22,9 @@ class Artist
   end
 
   def genres
+    result = []
+    songs.each { |song| result << song.genre }
+    result
   end
 
 end
