@@ -14,4 +14,14 @@ class Patient
     appointment = Appointment.new(date, self, doctor)
     appointment
   end
+
+  def appointments
+    Appointment.all.select { |appointment| appointment.patient == self }
+  end
+
+  def doctors
+    result = []
+    appointments.each { |appointment| result << appointment.doctor }
+    result
+  end
 end
