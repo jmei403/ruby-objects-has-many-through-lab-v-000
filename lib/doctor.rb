@@ -26,5 +26,5 @@ class Doctor
     appointments.each { |appointment| result << appointment.patient }
     result
   end
-  
+
 end
